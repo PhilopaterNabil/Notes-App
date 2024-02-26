@@ -36,7 +36,7 @@ class _AddNoteFormState extends State<AddNoteForm> {
             onSaved: (value) {
               title = value;
             },
-            hint: 'Title',
+            hintText: 'Title',
           ),
           const SizedBox(
             height: 16,
@@ -45,7 +45,7 @@ class _AddNoteFormState extends State<AddNoteForm> {
             onSaved: (value) {
               subTitle = value;
             },
-            hint: 'Content',
+            hintText: 'Content',
             maxLines: 5,
           ),
           const SizedBox(
@@ -65,7 +65,7 @@ class _AddNoteFormState extends State<AddNoteForm> {
                     var currentDate = DateTime.now();
 
                     var formattedCurrentDate =
-                        DateFormat('yyyy-mm-dd').format(currentDate);
+                        DateFormat('yyyy-MM-dd').format(currentDate);
                     var noteModel = NoteModel(
                       title: title!,
                       subTile: subTitle!,
